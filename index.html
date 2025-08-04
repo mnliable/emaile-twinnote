@@ -621,6 +621,75 @@
             margin-top: 2rem;
         }
         
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1b2d 100%);
+            border-top: 2px solid #ffd700;
+            margin-top: 4rem;
+            padding: 3rem 0 2rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--content-border);
+        }
+        
+        .footer-section {
+            text-align: center;
+        }
+        
+        .footer-section h3 {
+            color: #ffd700;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .footer-section a {
+            color: #ffd700;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .footer-section p {
+            color: #ffd700;
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 var(--mobile-border);
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
+            }
+            
+            .footer-section a,
+            .footer-section p {
+                font-size: 0.9rem;
+            }
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -832,6 +901,27 @@
             </div>
         </section>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SUPPORT</h3>
+                <a href="https://twinnotemusic.com/terms-and-conditions" target="_blank">Terms and Conditions</a>
+                <a href="https://twinnotemusic.com/privacy-policy" target="_blank">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>CONTACT</h3>
+                <a href="mailto:info@twinnotemusic.com">info@twinnotemusic.com</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>TWIN NOTE MUSIC PRODUCTIONS</h3>
+                <a href="https://twinnotemusic.com/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
