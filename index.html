@@ -460,13 +460,11 @@
             opacity: 0;
             transition: opacity 0.3s ease;
             transform: translateY(100%);
-            pointer-events: none;
         }
         
         .photo-item:hover .photo-overlay {
             opacity: 1;
             transform: translateY(0);
-            pointer-events: auto;
         }
         
         .photo-download-btn {
@@ -482,8 +480,9 @@
             text-decoration: none;
             display: inline-block;
             position: relative;
-            z-index: 10;
-            pointer-events: auto;
+            z-index: 20;
+            min-width: 80px;
+            text-align: center;
         }
         
         .photo-download-btn:hover {
@@ -853,31 +852,31 @@
                 <div class="photo-item">
                     <img src="photos/Press%20photos/emalie%20hs.jpg" alt="Emalie Rain Press Photo 1" onclick="openLightbox(this.src)">
                     <div class="photo-overlay">
-                        <a href="photos/Press%20photos/emalie%20hs.jpg" class="photo-download-btn" download onclick="event.stopPropagation()">Download</a>
+                        <a href="photos/Press%20photos/emalie%20hs.jpg" class="photo-download-btn" download onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank');">Download</a>
                     </div>
                 </div>
                 <div class="photo-item">
                     <img src="photos/Press%20photos/Epress1.jpg" alt="Emalie Rain Press Photo 2" onclick="openLightbox(this.src)">
                     <div class="photo-overlay">
-                        <a href="photos/Press%20photos/Epress1.jpg" class="photo-download-btn" download onclick="event.stopPropagation()">Download</a>
+                        <a href="photos/Press%20photos/Epress1.jpg" class="photo-download-btn" download onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank');">Download</a>
                     </div>
                 </div>
                 <div class="photo-item">
                     <img src="photos/Press%20photos/Epress2.jpg" alt="Emalie Rain Press Photo 3" onclick="openLightbox(this.src)">
                     <div class="photo-overlay">
-                        <a href="photos/Press%20photos/Epress2.jpg" class="photo-download-btn" download onclick="event.stopPropagation()">Download</a>
+                        <a href="photos/Press%20photos/Epress2.jpg" class="photo-download-btn" download onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank');">Download</a>
                     </div>
                 </div>
                 <div class="photo-item">
                     <img src="photos/Press%20photos/Epress3.jpg" alt="Emalie Rain Press Photo 4" onclick="openLightbox(this.src)">
                     <div class="photo-overlay">
-                        <a href="photos/Press%20photos/Epress3.jpg" class="photo-download-btn" download onclick="event.stopPropagation()">Download</a>
+                        <a href="photos/Press%20photos/Epress3.jpg" class="photo-download-btn" download onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank');">Download</a>
                     </div>
                 </div>
                 <div class="photo-item">
                     <img src="photos/Press%20photos/Epress4.JPG" alt="Emalie Rain Press Photo 5" onclick="openLightbox(this.src)">
                     <div class="photo-overlay">
-                        <a href="photos/Press%20photos/Epress4.JPG" class="photo-download-btn" download onclick="event.stopPropagation()">Download</a>
+                        <a href="photos/Press%20photos/Epress4.JPG" class="photo-download-btn" download onclick="event.stopPropagation(); event.preventDefault(); window.open(this.href, '_blank');">Download</a>
                     </div>
                 </div>
             </div>
