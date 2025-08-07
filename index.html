@@ -12,15 +12,23 @@
     <meta property="og:url" content="https://emaile-twinnote.ca">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Emalie Rain - Electronic Press Kit">
-    <meta name="twitter:description" content="Official EPK featuring music, press photos, and biography">
+        <meta name="twitter:description" content="Official EPK featuring music, press photos, and biography">
     <link rel="canonical" href="https://emaile-twinnote.ca">
     <title>Emalie Rain - Electronic Press Kit</title>
-    
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://i.imgur.com">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="photos/Press%20photos/emalie%20hs.jpg" as="image">
+    <link rel="preload" href="photos/Press%20photos/Epress2.jpg" as="image">
+    <link rel="preload" href="photos/Press%20photos/Epress3.jpg" as="image">
+    <link rel="preload" href="photos/Press%20photos/Epress1.jpg" as="image">
+    
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -406,9 +414,27 @@
         /* Photo Gallery */
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
             margin-top: 2rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
         }
         
         .photo-item {
@@ -572,10 +598,12 @@
             border: 2px solid var(--accent-color);
             padding: 1rem 2rem;
             border-radius: 50px;
-            display: inline-block;
+            display: block;
             transition: all 0.3s ease;
             margin: 1rem auto;
-	    text-align: center;
+            text-align: center;
+            width: fit-content;
+            max-width: 90%;
         }
         
         .contact-email:hover {
@@ -751,7 +779,7 @@
             
             <!-- Track 1 -->
             <div class="music-player">
-                <img src="https://i.imgur.com/baI0QoB.jpeg" alt="Youth" class="album-cover">
+                <img src="https://i.imgur.com/baI0QoB.jpeg" alt="Youth" class="album-cover" loading="lazy">
                 <div class="track-info">
                     <h3 class="album-title">Youth</h3>
                     
@@ -771,7 +799,7 @@
             
             <!-- Track 2 -->
             <div class="music-player">
-                <img src="https://i.imgur.com/MfL6Kkj.jpeg" alt="Not Alone" class="album-cover">
+                <img src="https://i.imgur.com/MfL6Kkj.jpeg" alt="Not Alone" class="album-cover" loading="lazy">
                 <div class="track-info">
                     <h3 class="album-title">Not Alone</h3>
               
@@ -791,7 +819,7 @@
             
             <!-- Track 3 -->
             <div class="music-player">
-                <img src="https://i.imgur.com/Gn4u2OQ.jpeg" alt="Fuck You" class="album-cover">
+                <img src="https://i.imgur.com/Gn4u2OQ.jpeg" alt="Fuck You" class="album-cover" loading="lazy">
                 <div class="track-info">
                     <h3 class="album-title">Fuck You</h3>
                 
@@ -817,17 +845,14 @@
                 <div class="photo-item" onclick="openLightbox('photos/Press%20photos/emalie%20hs.jpg')">
                     <img src="photos/Press%20photos/emalie%20hs.jpg" alt="Emalie Rain Press Photo 1">
                 </div>
-                <div class="photo-item" onclick="openLightbox('photos/Press%20photos/Epress1.jpg')">
-                    <img src="photos/Press%20photos/Epress1.jpg" alt="Emalie Rain Press Photo 2">
-                </div>
                 <div class="photo-item" onclick="openLightbox('photos/Press%20photos/Epress2.jpg')">
-                    <img src="photos/Press%20photos/Epress2.jpg" alt="Emalie Rain Press Photo 3">
+                    <img src="photos/Press%20photos/Epress2.jpg" alt="Emalie Rain Press Photo 2">
                 </div>
                 <div class="photo-item" onclick="openLightbox('photos/Press%20photos/Epress3.jpg')">
-                    <img src="photos/Press%20photos/Epress3.jpg" alt="Emalie Rain Press Photo 4">
+                    <img src="photos/Press%20photos/Epress3.jpg" alt="Emalie Rain Press Photo 3" style="object-position: top center;">
                 </div>
-                <div class="photo-item" onclick="openLightbox('photos/Press%20photos/Epress4.JPG')">
-                    <img src="photos/Press%20photos/Epress4.JPG" alt="Emalie Rain Press Photo 5">
+                <div class="photo-item" onclick="openLightbox('photos/Press%20photos/Epress1.jpg')">
+                    <img src="photos/Press%20photos/Epress1.jpg" alt="Emalie Rain Press Photo 4">
                 </div>
             </div>
         </section>
